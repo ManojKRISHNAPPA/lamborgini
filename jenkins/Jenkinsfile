@@ -27,7 +27,7 @@ pipeline{
             steps{
                 sh '''
                 echo "Private IP details: " 
-                hostname -I
+                ifconfig -a
                 '''
             }  
         }
