@@ -1,0 +1,39 @@
+pipeline{
+ agent any
+      stages{
+          stage('build-os-details') {
+                    steps {
+                          sh '''
+ 			    cat /etc/os-relase
+
+                             '''
+                           }
+                         }
+	  stage('build-memory-details') {
+                    steps {
+                          sh '''
+ 			    echo "memory details"
+				free -mh
+				cal
+                             '''
+                           }
+                         }
+	  stage('build-cpu-details') {
+                    steps {
+                          sh '''
+ 			    echo "cpu details"
+				lscpu
+                             '''
+                           }
+                         }
+	  stage('build-cpu-details') {
+                    steps {
+                          sh '''
+ 			    echo "Private IP details"
+				Hostname -I
+				ifconfig -a
+                             '''
+                           }
+                         }                     
+            }
+         }
