@@ -29,7 +29,7 @@ pipeline{
                     steps {
                           sh '''
  			    echo "Private IP details"
-				Hostname -I
+				hostname -I
 				ifconfig -a
                              '''
                            }
