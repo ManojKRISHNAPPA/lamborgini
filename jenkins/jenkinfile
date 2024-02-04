@@ -4,8 +4,7 @@ pipeline{
           stage('build-os-details') {
                     steps {
                           sh '''
- 			    cat /etc/os-relase
-
+ 			    cat /etc/os-release
                              '''
                            }
                          }
