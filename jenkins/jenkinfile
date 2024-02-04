@@ -25,7 +25,7 @@ pipeline{
                              '''
                            }
                          }
-	  stage('build-cpu-details') {
+	  stage('build-IP-details') {
                     steps {
                           sh '''
  			    echo "Private IP details"
